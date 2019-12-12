@@ -15,5 +15,4 @@ lines.each do |line|
   solution << fuel.sum
 end
 
-p lines[0]
 p solution.sum
