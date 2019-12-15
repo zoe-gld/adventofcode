@@ -30,10 +30,6 @@ path_2.split(',').each do |move|
   end
 end
 
-# wire_1.each do |coord|
-#   solution << coord[:x].abs + coord[:y].abs if wire_2.include?(coord)
-# end
-
 solution = (wire_1 & wire_2).sort {|a, b| a[:x].abs + a[:y].abs <=> b[:x].abs + b[:y].abs }[1]
 
 p "La solution est #{solution[:x].abs + solution[:y].abs}"
