@@ -1,5 +1,3 @@
-# require 'byebug'
-
 range = (347312..805915)
 
 def increasing_digits?(number)
