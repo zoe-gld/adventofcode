@@ -37,4 +37,4 @@ wire_1.each do |coord|
   solution << coord[0].abs + coord[1].abs if wire_2.include?(coord)
 end
 
-p (solution - [0]).min
+p solution.sort
