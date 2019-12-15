@@ -30,6 +30,14 @@ path_2.split(',').each do |move|
   end
 end
 
-solution = (wire_1 & wire_2).sort {|a, b| a[:x].abs + a[:y].abs <=> b[:x].abs + b[:y].abs }[1]
+solution_1 = (wire_1 & wire_2).sort {|a, b| a[:x].abs + a[:y].abs <=> b[:x].abs + b[:y].abs }[1]
 
-p "La solution est #{solution[:x].abs + solution[:y].abs}"
+p "La solution de la partie 1 est #{solution_1[:x].abs + solution_1[:y].abs}."
+
+solution_2 = []
+
+(wire_1 & wire_2).each do |inter|
+  solution_2 << wire_1.find_index(inter) + wire_2.find_index(inter)
+end
+
+p "La solution de la partie 2 est #{solution_2.sort[1]}."
